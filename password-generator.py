@@ -30,8 +30,9 @@ for n in range(0, password_length):
         random_symbol = symbols[random.randint(0, len(symbols) - 1)]
         password += str(random_symbol)
     else:
-        #random_number = numbers[random.randint(0, len(numbers) - 1)]
+        # random_number = numbers[random.randint(0, len(numbers) - 1)]
         random_number = random.choice(numbers)
+        # random.shuffle(list_of_chars)
         password += str(random_number)
 
 print(f"Here is your password: {password}")
