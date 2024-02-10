@@ -22,6 +22,7 @@ a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
 
 
 def caesar(cipher_direction, input_text, shift_amount):
+    """This function will encode, decode input text based on given shift amount"""
     output_text = ""
     shift_amount %= 26
     if cipher_direction == "decode":
