@@ -36,7 +36,8 @@ def divide(n1, n2):
 
 dict_operations = {"+": add, "-": subtract, "/": divide, "*": multiply}
 
-while True:
+
+def calculator():
     is_result_reused = "y"
     first_number = float(input("What's the first number?: "))
     while is_result_reused == "y":
@@ -49,5 +50,16 @@ while True:
         print(f"{first_number} {operation} {second_number} = {result}")
 
         is_result_reused = input(f"Type 'y to continue calculating with {result}, "
-                                 f"or type 'n' to start a new calculation: ").lower()
+                                 f"or type 'n' to start a new calculation or type 'q' to exit: ").lower()
         first_number = result
+    if is_result_reused == "n":
+        calculator()
+    elif is_result_reused == "q":
+        exit()
+    else:
+        print("Invalid input. quitting...")
+        exit()
+
+
+
+calculator()
